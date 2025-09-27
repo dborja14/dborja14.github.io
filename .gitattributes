@@ -1,0 +1,5 @@
+# Auto normalize line endings
+* text=auto
+
+# Treat package-lock.json strictly as LF
+package-lock.json text eol=lf
