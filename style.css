@@ -452,6 +452,15 @@ section.active {
     background: rgba(0, 0, 0, 0.1);
 }
 
+.filter-container {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically (optional) */
+  flex-wrap: wrap;         /* allows wrapping on smaller screens */
+  gap: 10px;               /* space between buttons */
+  margin: 10px 0;          /* spacing around the button row */
+}
+
 .filter-buttons {
     background: rgba(255, 255, 255, 0.2);
     color: white;
@@ -464,7 +473,6 @@ section.active {
     transition: all 0.3s ease;
     display: flex;
     justify-content: center;
-    margin: 10px;
 }
 
 .filter-buttons:hover {
