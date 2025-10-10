@@ -1,182 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Darryl Borja | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darryl K. Borja - Portfolio</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 </head>
 <body>
-  <div class="wrapper">
-    <nav class="navbar">
-      <ul>
-        <li><a href="#" onclick="showSection('home')">Home</a></li>
-        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-        <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
-      </ul>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/favicon_io/favicon-32x32.png" alt="Darryl K. Borja Logo">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main class="content">
-      <section id="home">
-        <img src="assets/portrait.jpg" class="rounded" style="max-height: 200px;">
-        <h1>Hello, I'm Darryl K. Borja</h1>
-        <p>AWS Cloud & Microsoft Azure Practitioner | Aspiring Cloud/DevOps Engineer | IT Operations Enthusiast</p>
-        <p>Recent IT graduate passionate about cloud computing. AWS Cloud and Microsoft Azure practitioner. Seeking an
-entry-level IT role to apply my technical skills, contribute to team goals, and grow in the fields of Cloud, DevOps,
-or IT Operations</p>
-        <a href="assets/Darryl-Borja-Resume.pdf" target="_blank" class="resume-button">View Resume</a>
-        
-      </section>
-
-      <section id="projects" style="display: none;">
-        <h2>My Projects</h2>
-        <div class="filter-buttons">
-          <button onclick="filterCards('all')" class="active">All</button>
-          <button onclick="filterCards('aws')">AWS</button>
-          <button onclick="filterCards('azure')">Azure</button>
-          <button onclick="filterCards('other')">Others</button>
+    <section id="home">
+        <div class="hero-card">
+            <div class="hero-image">
+                <img src="assets/portrait.jpg" alt="Darryl K. Borja Portrait" style="width: 100%;">
+            </div>
+            <div class="hero-content">
+                <h1>Hello, I'm Darryl K. Borja</h1>
+                <p class="subtitle">AWS Cloud & Microsoft Azure Practitioner | Aspiring Cloud/DevOps Engineer | IT Operations Enthusiast</p>
+                <p>Recent IT graduate passionate about cloud computing. AWS Cloud and Microsoft Azure practitioner seeking an entry-level IT role to apply my technical skills, contribute to team goals, and grow in the fields of Cloud, DevOps, or IT Operations.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/darrylborja/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/dborja14" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="assets/Darryl-Borja-Resume.pdf" target="_blank" class="resume-button">
+                        <i class="bi bi-file-earmark-person-fill"></i> View Resume
+                    </a>
+                    <a href="mailto:darryl.borja@yahoo.com">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="card-container">
-          <article class="card aws">
-          <img src="images/logos/aws-logo.png" alt="projects"/>
-          <h5>AWS S3 Static Website</h5>
-          <p>Deployed on S3 with public access using Free Tier</p>
-          <a href="https://github.com/dborja14/aws-static-website-s3" target="_blank" rel="noopener noreferrer">View Project</a>
-          </article>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-container">
+                <!-- Cloud Platforms -->
+                <div class="skill-category">
+                    <h3>☁️ Cloud Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Microsoft Azure</span>
+                        <span class="skill-tag">EC2</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">EFS</span>
+                        <span class="skill-tag">IAM</span>
+                    </div>
+                </div>
 
-          <article class="card aws">
-            <img src="images/logos/aws-logo.png" alt="projects"/>
-            <h5>AWS EC2 Static Website using NGINX</h5>
-            <p>Deployed on Amazon Linux 2023 EC2 with NGINX</p>
-            <a href="https://github.com/dborja14/aws-static-website-ec2" target="_blank" rel="noopener noreferrer">View Project</a>
-          </article>
+                <!-- Technical Skills -->
+                <div class="skill-category">
+                    <h3>💻 Technical Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Laravel</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
 
-          <article class="card azure">
-            <img src="images/logos/azure-logo.png" alt="projects"/>
-            <h5>Microsoft Azure Static Website</h5>
-            <p>Deployed on Azure Storage with public access using Free Tier</p>
-            <a href="https://github.com/dborja14/azure-static-website" target="_blank" rel="noopener noreferrer">View Project</a>
-          </article>
+                <!-- Tools & Platforms -->
+                <div class="skill-category">
+                    <h3>🛠️ Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">PHPMyAdmin</span>
+                        <span class="skill-tag">IntelliJ</span>
+                        <span class="skill-tag">VPS</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3>🎯 Soft Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Eager to Learn</span>
+                        <span class="skill-tag">Analytical</span>
+                        <span class="skill-tag">Detail-Oriented</span>
+                        <span class="skill-tag">Adaptability</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Multitasking</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section id="certifications" style="display: none;">
-        <h2>Certifications</h2>
-        <div class="filter-buttons">
-          <button onclick="filterCards('all')" class="active">All</button>
-          <button onclick="filterCards('aws')">AWS</button>
-          <button onclick="filterCards('azure')">Azure</button>
-          <button onclick="filterCards('other')">Others</button>
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
+                <!-- QA Intern -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Quality Assurance Intern</h3>
+                        <div class="timeline-date">Feb 2025 – May 2025</div>
+                        <p><strong>Valenin IT Services</strong></p>
+                        <p>Created and updated Jira tickets, identified and reported bugs, and worked with developers to ensure software quality.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science in Information Technology</h3>
+                        <div class="timeline-date">Aug 2021 – Jul 2025</div>
+                        <p><strong>Adamson University</strong></p>
+                        <p>🎖️ Academic Merit Award</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="card-container">
-          <article class="card aws">
-            <img src="images/certificates/AWS Certified Cloud Practitioner (Course Completion).jpg" alt="certs"/>
-            <h5>AWS Certified Cloud Practitioner (Course Completion)</h5>
-            <a href="https://www.udemy.com/certificate/UC-df6063f1-c7e6-4b46-9f04-0240f3058300/" target="_blank" rel="noopener noreferrer">Verify</a>
-          </article>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button onclick="filterProjects('all')" class="filter-buttons active">All</button>
+                <button onclick="filterProjects('aws')" class="filter-buttons">AWS</button>
+                <button onclick="filterProjects('azure')" class="filter-buttons">Azure</button>
+                <button onclick="filterProjects('other')" class="filter-buttons">Others</button>
+            </div>
 
-          <article class="card azure">
-            <img src="images/certificates/AZ-900 Microsoft Azure Fundamentals (Course Completion).jpg" alt="certs"/>
-            <h5>AZ-900: Microsoft Azure Fundamentals (Course Completion)</h5>
-            <a href="https://www.udemy.com/certificate/UC-db7f0e45-72b5-4b97-9a65-96f3afff191b/" target="_blank" rel="noopener noreferrer">Verify</a>
-          </article>
+            <!-- Project Cards -->
+            <div class="card-container">
+                <!-- AWS S3 Project -->
+                <article class="project-card aws" data-category="aws">
+                    <div class="project-image">
+                        <img src="images/logos/aws-logo.png" alt="AWS Logo">
+                    </div>
+                    <div class="project-content">
+                        <h3>AWS S3 Static Website</h3>
+                        <p>Deployed a static website on S3 with public access using Free Tier</p>
+                        <div class="project-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">S3</span>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <a href="https://github.com/dborja14/aws-static-website-s3" target="_blank" rel="noopener noreferrer" class="verify-btn">View Project</a>
+                    </div>
+                </article>
 
-          <article class="card aws">
-            <img src="images/certificates/AWS SimuLearn File Systems in the Cloud.jpg" alt="certs"/>
-            <h5>AWS SimuLearn: File Systems in the Cloud</h5>
-            <a href="https://skillbuilder.aws/learn/A5M8X2CHM3/aws-simulearn-file-systems-in-the-cloud/RAJVAUNMHR" target="_blank" rel="noopener noreferrer">Verify</a>
-          </article>
+                <!-- AWS EC2 Project -->
+                <article class="project-card aws" data-category="aws">
+                    <div class="project-image">
+                        <img src="images/logos/aws-logo.png" alt="AWS Logo">
+                    </div>
+                    <div class="project-content">
+                        <h3>AWS EC2 Static Website using NGINX</h3>
+                        <p>Deployed on Amazon Linux 2023 EC2 with NGINX</p>
+                        <div class="project-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">EC2</span>
+                            <span class="tag">Linux CLI</span>
+                            <span class="tag">NGINX</span>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <a href="https://github.com/dborja14/aws-static-website-ec2" target="_blank" rel="noopener noreferrer" class="verify-btn">View Project</a>
+                    </div>
+                </article>
 
-          <article class="card aws">
-            <img src="images/certificates/AWS SimuLearn Cloud First Steps.jpg" alt="certs"/>
-            <h5>AWS SimuLearn: Cloud First Steps</h5>
-            <a href="https://skillbuilder.aws/learn/W94AYNMYDS/aws-simulearn-cloud-first-steps/B8K46VES8S" target="_blank" rel="noopener noreferrer">Verify</a>
-          </article>
+                <!-- Azure Project -->
+                <article class="project-card azure" data-category="azure">
+                    <div class="project-image">
+                        <img src="images/logos/azure-logo.png" alt="Azure Logo">
+                    </div>
+                    <div class="project-content">
+                        <h3>Microsoft Azure Static Website</h3>
+                        <p>Deployed on Azure Storage with public access using Free Tier</p>
+                        <div class="project-tags">
+                            <span class="tag">Azure</span>
+                            <span class="tag">Azure Storage</span>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <a href="https://github.com/dborja14/azure-static-website" target="_blank" rel="noopener noreferrer" class="verify-btn">View Project</a>
+                    </div>
+                </article>
 
-          <article class="card aws">
-            <img src="images/certificates/AWS SimuLearn Cloud Computing Essentials.jpg" alt="certs"/>
-            <h5>AWS SimuLearn: Cloud Computing Essentials</h5>
-            <a href="https://skillbuilder.aws/learn/JUV48NHGQY/aws-simulearn-cloud-computing-essentials/QB768XECES" target="_blank" rel="noopener noreferrer">Verify</a>
-          </article>
+                <!-- DeJaView E-Commerce -->
+                <article class="project-card other" data-category="other">
+                    <div class="project-image">🛒</div>
+                    <div class="project-content">
+                        <h3>DeJaView E-Commerce Platform</h3>
+                        <p>Capstone project featuring data analytics and customer personalized recommendation system. Developed using Laravel, Java, and PHPMyAdmin; deployed on VPS with GitHub version control.</p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">PHPMyAdmin</span>
+                            <span class="tag">VPS</span>
+                            <span class="tag">Hostinger</span>
+                            <span class="tag">GitHub</span>
+                        </div>
+                    </div>
+                    <div class="cert-content">
+                        <a href="https://github.com/dborja14/DeJaView" target="_blank" rel="noopener noreferrer" class="verify-btn">View Project</a>
+                    </div>
+                </article>
 
-            <article class="card aws">
-            <img src="images/certificates/AWS SimuLearn Computing Solutions.jpg" alt="certs"/>
-            <h5>AWS SimuLearn: Computing Solutions</h5>
-            <a href="https://skillbuilder.aws/learn/NZ6D7QYABD/aws-simulearn-computing-solutions/YQA9623D5T" target="_blank" rel="noopener noreferrer">Verify</a>
-          </article>
-
-          <article class="card other">
-            <img src="images/certificates/Introduction to Data Analytics.png" alt="certs"/>
-            <h5>Introduction to Data Analytics</h5>
-            <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxMjE3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODQxMjQyMl84NzcxMjkwMTc0ODY5NTY5NTI3OC5wbmciLCJ1c2VybmFtZSI6IkRhcnJ5bCBLaG8gQm9yamEifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fdashboard%2Fcertificate&%24web_only=true&_branch_match_id=1408749508067303536&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVL600qCpwzvf3D0myrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAMLFQSZBAAAA" target="_blank" rel="noopener noreferrer">Verify</a>
-          </article>
-
-          <article class="card other">
-            <img src="images/certificates/IT SPECIALIST - DATABASES.png" alt="certs"/>
-            <h5>IT Specialist - Databases</h5>
-            <a href="https://www.credly.com/earner/earned/badge/ca65ea4c-818f-4c2d-bf01-1d91653cc3c9" target="_blank" rel="noopener noreferrer">Verify</a>
-          </article>
+                <!-- Library Management System -->
+                <article class="project-card other" data-category="other">
+                    <div class="project-image">📚</div>
+                    <div class="project-content">
+                        <h3>Library Management System</h3>
+                        <p>School project featuring book and user management system. Built with Laravel and PHPMyAdmin; included search, borrow/return functionality, and full CRUD operations.</p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">CRUD</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
-      </section>
-    </main>
+    </section>
 
-    <footer>
-      <nav class="social-links">
-        <a href="https://www.linkedin.com/in/darrylborja/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications & Training</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button onclick="filterCertifications('all')" class="filter-buttons active">All</button>
+                <button onclick="filterCertifications('aws')" class="filter-buttons">AWS</button>
+                <button onclick="filterCertifications('azure')" class="filter-buttons">Azure</button>
+                <button onclick="filterCertifications('other')" class="filter-buttons">Others</button>
+            </div>
 
-        <a href="https://github.com/dborja14" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i> GitHub
-        </a>
+            <!-- Certification Cards -->
+            <div class="card-container">
+                <!-- AWS Cloud Practitioner -->
+                <article class="cert-card aws" data-category="aws">
+                    <div class="cert-image">
+                        <img src="images/certificates/AWS Certified Cloud Practitioner (Course Completion).jpg" alt="AWS Cloud Practitioner Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h5>AWS Certified Cloud Practitioner (Course Completion)</h5>
+                        <a href="https://www.udemy.com/certificate/UC-df6063f1-c7e6-4b46-9f04-0240f3058300/" target="_blank" rel="noopener noreferrer" class="verify-btn">Verify</a>
+                    </div>
+                </article>
 
-        <a href="mailto:darryl.borja@yahoo.com">
-          <i class="fas fa-envelope"></i> Email Me
-        </a>
-      </nav>
-      
-      <p>&copy; 2025 Darryl K. Borja. All rights reserved.</p>
-    </footer>
-  </div>
+                <!-- Azure Fundamentals -->
+                <article class="cert-card azure" data-category="azure">
+                    <div class="cert-image">
+                        <img src="images/certificates/AZ-900 Microsoft Azure Fundamentals (Course Completion).jpg" alt="Azure Fundamentals Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h5>AZ-900: Microsoft Azure Fundamentals (Course Completion)</h5>
+                        <a href="https://www.udemy.com/certificate/UC-db7f0e45-72b5-4b97-9a65-96f3afff191b/" target="_blank" rel="noopener noreferrer" class="verify-btn">Verify</a>
+                    </div>
+                </article>
 
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('section');
-      sections.forEach(section => {
-        if (section.id === id) {
-          section.style.display = 'block';
-        } else {
-          section.style.display = 'none';
+                <!-- AWS SimuLearn - File Systems -->
+                <article class="cert-card aws" data-category="aws">
+                    <div class="cert-image">
+                        <img src="images/certificates/AWS SimuLearn File Systems in the Cloud.jpg" alt="AWS SimuLearn File Systems Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h5>AWS SimuLearn: File Systems in the Cloud</h5>
+                        <a href="https://skillbuilder.aws/learn/A5M8X2CHM3/aws-simulearn-file-systems-in-the-cloud/RAJVAUNMHR" target="_blank" rel="noopener noreferrer" class="verify-btn">Verify</a>
+                    </div>
+                </article>
+
+                <!-- AWS SimuLearn - Cloud First Steps -->
+                <article class="cert-card aws" data-category="aws">
+                    <div class="cert-image">
+                        <img src="images/certificates/AWS SimuLearn Cloud First Steps.jpg" alt="AWS SimuLearn Cloud First Steps Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h5>AWS SimuLearn: Cloud First Steps</h5>
+                        <a href="https://skillbuilder.aws/learn/W94AYNMYDS/aws-simulearn-cloud-first-steps/B8K46VES8S" target="_blank" rel="noopener noreferrer" class="verify-btn">Verify</a>
+                    </div>
+                </article>
+
+                <!-- AWS SimuLearn - Cloud Computing Essentials -->
+                <article class="cert-card aws" data-category="aws">
+                    <div class="cert-image">
+                        <img src="images/certificates/AWS SimuLearn Cloud Computing Essentials.jpg" alt="AWS SimuLearn Cloud Computing Essentials Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h5>AWS SimuLearn: Cloud Computing Essentials</h5>
+                        <a href="https://skillbuilder.aws/learn/JUV48NHGQY/aws-simulearn-cloud-computing-essentials/QB768XECES" target="_blank" rel="noopener noreferrer" class="verify-btn">Verify</a>
+                    </div>
+                </article>
+
+                <!-- AWS SimuLearn - Computing Solutions -->
+                <article class="cert-card aws" data-category="aws">
+                    <div class="cert-image">
+                        <img src="images/certificates/AWS SimuLearn Computing Solutions.jpg" alt="AWS SimuLearn Computing Solutions Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h5>AWS SimuLearn: Computing Solutions</h5>
+                        <a href="https://skillbuilder.aws/learn/NZ6D7QYABD/aws-simulearn-computing-solutions/YQA9623D5T" target="_blank" rel="noopener noreferrer" class="verify-btn">Verify</a>
+                    </div>
+                </article>
+
+                <!-- Data Analytics -->
+                <article class="cert-card other" data-category="other">
+                    <div class="cert-image">
+                        <img src="images/certificates/Introduction to Data Analytics.png" alt="Data Analytics Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h5>Introduction to Data Analytics</h5>
+                        <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIxMjE3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODQxMjQyMl84NzcxMjkwMTc0ODY5NTY5NTI3OC5wbmciLCJ1c2VybmFtZSI6IkRhcnJ5bCBLaG8gQm9yamEifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fdashboard%2Fcertificate&%24web_only=true&_branch_match_id=1408749508067303536&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVL600qCpwzvf3D0myrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAMLFQSZBAAAA" target="_blank" rel="noopener noreferrer" class="verify-btn">Verify</a>
+                    </div>
+                </article>
+
+                <!-- IT Specialist - Databases -->
+                <article class="cert-card other" data-category="other">
+                    <div class="cert-image">
+                        <img src="images/certificates/IT SPECIALIST - DATABASES.png" alt="IT Specialist Databases Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h5>IT Specialist - Databases</h5>
+                        <a href="https://www.credly.com/earner/earned/badge/ca65ea4c-818f-4c2d-bf01-1d91653cc3c9" target="_blank" rel="noopener noreferrer" class="verify-btn">Verify</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Show specific section
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = section.id === id ? 'flex' : 'none';
+            });
         }
-      });
-    }
 
-    function filterCards(category) {
-      const cards = document.querySelectorAll('.card');
-      const buttons = document.querySelectorAll('.filter-buttons button');
-
-      // Update active button
-      buttons.forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.filter-buttons button[onclick="filterCards('${category}')"]`).classList.add('active');
-
-      // Filter cards
-      cards.forEach(card => {
-        if (category === 'all' || card.classList.contains(category)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
+        // Toggle mobile menu
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
         }
-      });
-    }
-  </script>
+
+        // Handle navigation clicks
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href').substring(1);
+                showSection(sectionId);
+                
+                // Close mobile menu
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 0.8s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.skill-category, .timeline-item, .project-card, .cert-card').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+
+        // Filter projects
+        function filterProjects(category) {
+            filterCards('.project-card', category, event);
+        }
+
+        // Filter certifications
+        function filterCertifications(category) {
+            filterCards('.cert-card', category, event);
+        }
+
+        // Generic filter function
+        function filterCards(selector, category, event) {
+            const cards = document.querySelectorAll(selector);
+            const buttons = event.target.parentElement.querySelectorAll('.filter-buttons');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

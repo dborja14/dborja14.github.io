@@ -1,0 +1,188 @@
+html, body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+header {
+  padding: 50px 20px 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 0;
+  color: #555;
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#projects .card img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.card img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.card h5 {
+  margin: 15px 0 10px;
+}
+
+.card p {
+  margin: 0 0 15px;
+}
+
+.card a {
+  color: white;
+  background-color: #007acc;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+
+.navbar {
+  background-color: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #005fa3;
+}
+
+.resume-button,
+.resume-download {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.resume-button:hover,
+.resume-download:hover {
+  background-color: #005fa3;
+}
+
+.social-links a {
+  font-size: 18px;
+  margin: 10px;
+  color: #007acc;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links a:hover {
+  color: #005fa3;
+}
+
+.social-links i {
+  font-size: 20px;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter-buttons button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #005fa3;
+}
+
+.filter-buttons button.active {
+  background-color: #005fa3;
+}
